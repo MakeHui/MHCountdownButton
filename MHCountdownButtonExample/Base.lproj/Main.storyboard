@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dwj-ta-qfx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ft8-au-RLu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXP-re-DDe" customClass="MHCountdownButton">
+                                <rect key="frame" x="135" y="253" width="105" height="34"/>
+                                <state key="normal" title="Begin Button">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="runingColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="finishedColor">
+                                        <color key="value" red="0.99607843139999996" green="0.31372549020000001" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="finishedText" value="点击重新倒计时"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="runingText" value="倒计时 %ld 秒"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snP-WD-jNN">
+                                <rect key="frame" x="135" y="295" width="105" height="34"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStopTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EPE-Wf-ZiL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGh-IB-YAA">
+                                <rect key="frame" x="135" y="337" width="105" height="34"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onContinueTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFm-wT-jTI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z7-ua-gHU">
+                                <rect key="frame" x="135" y="379" width="105" height="34"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRestartTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnY-ap-6cb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vGh-IB-YAA" firstAttribute="trailing" secondItem="3z7-ua-gHU" secondAttribute="trailing" id="FZ2-vR-SWU"/>
+                            <constraint firstItem="eXP-re-DDe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ixv-ly-SJo"/>
+                            <constraint firstItem="snP-WD-jNN" firstAttribute="trailing" secondItem="vGh-IB-YAA" secondAttribute="trailing" id="UGr-3i-cUD"/>
+                            <constraint firstItem="3z7-ua-gHU" firstAttribute="top" secondItem="vGh-IB-YAA" secondAttribute="bottom" constant="8" symbolic="YES" id="WJE-wG-dnE"/>
+                            <constraint firstItem="snP-WD-jNN" firstAttribute="leading" secondItem="vGh-IB-YAA" secondAttribute="leading" id="fFm-je-l6L"/>
+                            <constraint firstItem="eXP-re-DDe" firstAttribute="top" secondItem="dwj-ta-qfx" secondAttribute="bottom" constant="233" id="fop-GW-vYu"/>
+                            <constraint firstItem="eXP-re-DDe" firstAttribute="leading" secondItem="snP-WD-jNN" secondAttribute="leading" id="ge4-bT-fv3"/>
+                            <constraint firstItem="vGh-IB-YAA" firstAttribute="top" secondItem="snP-WD-jNN" secondAttribute="bottom" constant="8" symbolic="YES" id="haC-z4-z8u"/>
+                            <constraint firstItem="snP-WD-jNN" firstAttribute="top" secondItem="eXP-re-DDe" secondAttribute="bottom" constant="8" symbolic="YES" id="jUh-4m-5FH"/>
+                            <constraint firstItem="eXP-re-DDe" firstAttribute="trailing" secondItem="snP-WD-jNN" secondAttribute="trailing" id="m0z-dj-M0R"/>
+                            <constraint firstItem="vGh-IB-YAA" firstAttribute="leading" secondItem="3z7-ua-gHU" secondAttribute="leading" id="uYC-o2-rBY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beginButton" destination="eXP-re-DDe" id="RRA-cN-TSG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="133"/>
+        </scene>
+    </scenes>
+</document>
