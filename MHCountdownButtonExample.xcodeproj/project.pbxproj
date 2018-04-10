@@ -13,8 +13,36 @@
 		7C1DBECF207CB552004FF943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C1DBECE207CB552004FF943 /* Assets.xcassets */; };
 		7C1DBED2207CB552004FF943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1DBED0207CB552004FF943 /* LaunchScreen.storyboard */; };
 		7C1DBED5207CB552004FF943 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DBED4207CB552004FF943 /* main.m */; };
-		7C1DBEDD207CB568004FF943 /* MHCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DBEDC207CB568004FF943 /* MHCountdownButton.m */; };
+		7C1DBEF1207D0CDF004FF943 /* MHCountdownButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1DBEEA207D0CDF004FF943 /* MHCountdownButton.framework */; };
+		7C1DBEF2207D0CDF004FF943 /* MHCountdownButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C1DBEEA207D0CDF004FF943 /* MHCountdownButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7C1DBEF7207D0D06004FF943 /* MHCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DBEDC207CB568004FF943 /* MHCountdownButton.m */; };
+		7C1DBEF8207D0DA6004FF943 /* MHCountdownButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1DBEDB207CB568004FF943 /* MHCountdownButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C1DBEF9207D0DC2004FF943 /* MHCountdownButton.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C1DBEDB207CB568004FF943 /* MHCountdownButton.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C1DBEEF207D0CDF004FF943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7C1DBEBA207CB552004FF943 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C1DBEE9207D0CDF004FF943;
+			remoteInfo = MHCountdownButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7C1DBEF6207D0CDF004FF943 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7C1DBEF2207D0CDF004FF943 /* MHCountdownButton.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7C1DBEC2207CB552004FF943 /* MHCountdownButtonExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHCountdownButtonExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,10 +57,20 @@
 		7C1DBED4207CB552004FF943 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C1DBEDB207CB568004FF943 /* MHCountdownButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHCountdownButton.h; sourceTree = "<group>"; };
 		7C1DBEDC207CB568004FF943 /* MHCountdownButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHCountdownButton.m; sourceTree = "<group>"; };
+		7C1DBEEA207D0CDF004FF943 /* MHCountdownButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MHCountdownButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1DBEED207D0CDF004FF943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7C1DBEBF207CB552004FF943 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1DBEF1207D0CDF004FF943 /* MHCountdownButton.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C1DBEE6207D0CDF004FF943 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,8 +83,8 @@
 		7C1DBEB9207CB552004FF943 = {
 			isa = PBXGroup;
 			children = (
-				7C1DBEDE207CB575004FF943 /* MHCountdownButton */,
 				7C1DBEC4207CB552004FF943 /* MHCountdownButtonExample */,
+				7C1DBEEB207D0CDF004FF943 /* MHCountdownButton */,
 				7C1DBEC3207CB552004FF943 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				7C1DBEC2207CB552004FF943 /* MHCountdownButtonExample.app */,
+				7C1DBEEA207D0CDF004FF943 /* MHCountdownButton.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,16 +114,28 @@
 			path = MHCountdownButtonExample;
 			sourceTree = "<group>";
 		};
-		7C1DBEDE207CB575004FF943 /* MHCountdownButton */ = {
+		7C1DBEEB207D0CDF004FF943 /* MHCountdownButton */ = {
 			isa = PBXGroup;
 			children = (
 				7C1DBEDB207CB568004FF943 /* MHCountdownButton.h */,
 				7C1DBEDC207CB568004FF943 /* MHCountdownButton.m */,
+				7C1DBEED207D0CDF004FF943 /* Info.plist */,
 			);
 			path = MHCountdownButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7C1DBEE7207D0CDF004FF943 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1DBEF8207D0DA6004FF943 /* MHCountdownButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		7C1DBEC1207CB552004FF943 /* MHCountdownButtonExample */ = {
@@ -94,15 +145,35 @@
 				7C1DBEBE207CB552004FF943 /* Sources */,
 				7C1DBEBF207CB552004FF943 /* Frameworks */,
 				7C1DBEC0207CB552004FF943 /* Resources */,
+				7C1DBEF6207D0CDF004FF943 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7C1DBEF0207D0CDF004FF943 /* PBXTargetDependency */,
 			);
 			name = MHCountdownButtonExample;
 			productName = MHCountdownButtonExample;
 			productReference = 7C1DBEC2207CB552004FF943 /* MHCountdownButtonExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7C1DBEE9207D0CDF004FF943 /* MHCountdownButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C1DBEF3207D0CDF004FF943 /* Build configuration list for PBXNativeTarget "MHCountdownButton" */;
+			buildPhases = (
+				7C1DBEE5207D0CDF004FF943 /* Sources */,
+				7C1DBEE6207D0CDF004FF943 /* Frameworks */,
+				7C1DBEE7207D0CDF004FF943 /* Headers */,
+				7C1DBEE8207D0CDF004FF943 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MHCountdownButton;
+			productName = MHCountdownButton;
+			productReference = 7C1DBEEA207D0CDF004FF943 /* MHCountdownButton.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -114,6 +185,10 @@
 				ORGANIZATIONNAME = MakeHui;
 				TargetAttributes = {
 					7C1DBEC1207CB552004FF943 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					7C1DBEE9207D0CDF004FF943 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -133,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				7C1DBEC1207CB552004FF943 /* MHCountdownButtonExample */,
+				7C1DBEE9207D0CDF004FF943 /* MHCountdownButton */,
 			);
 		};
 /* End PBXProject section */
@@ -148,6 +224,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C1DBEE8207D0CDF004FF943 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -155,14 +238,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C1DBEDD207CB568004FF943 /* MHCountdownButton.m in Sources */,
 				7C1DBECA207CB552004FF943 /* ViewController.m in Sources */,
 				7C1DBED5207CB552004FF943 /* main.m in Sources */,
 				7C1DBEC7207CB552004FF943 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7C1DBEE5207D0CDF004FF943 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1DBEF9207D0DC2004FF943 /* MHCountdownButton.h in Sources */,
+				7C1DBEF7207D0D06004FF943 /* MHCountdownButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7C1DBEF0207D0CDF004FF943 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C1DBEE9207D0CDF004FF943 /* MHCountdownButton */;
+			targetProxy = 7C1DBEEF207D0CDF004FF943 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7C1DBECB207CB552004FF943 /* Main.storyboard */ = {
@@ -318,6 +417,52 @@
 			};
 			name = Release;
 		};
+		7C1DBEF4207D0CDF004FF943 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 93T9FJZ8S5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MHCountdownButton/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huyaohui.MHCountdownButton;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C1DBEF5207D0CDF004FF943 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 93T9FJZ8S5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MHCountdownButton/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.huyaohui.MHCountdownButton;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -335,6 +480,15 @@
 			buildConfigurations = (
 				7C1DBED9207CB552004FF943 /* Debug */,
 				7C1DBEDA207CB552004FF943 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C1DBEF3207D0CDF004FF943 /* Build configuration list for PBXNativeTarget "MHCountdownButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C1DBEF4207D0CDF004FF943 /* Debug */,
+				7C1DBEF5207D0CDF004FF943 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
