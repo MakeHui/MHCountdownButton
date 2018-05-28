@@ -8,14 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for MHCountdownButton.
-FOUNDATION_EXPORT double MHCountdownButtonVersionNumber;
-
-//! Project version string for MHCountdownButton.
-FOUNDATION_EXPORT const unsigned char MHCountdownButtonVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <MHCountdownButton/PublicHeader.h>
-
 @protocol MHCountdownButtonDelegate;
 
 
