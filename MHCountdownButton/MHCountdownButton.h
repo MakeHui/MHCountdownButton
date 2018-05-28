@@ -15,6 +15,8 @@
 
 @property(nonatomic, assign) id<MHCountdownButtonDelegate> delegate;
 
+@property(nonatomic, assign)IBInspectable BOOL autoRunning;
+
 @property(nonatomic, assign)IBInspectable NSUInteger duration;
 
 @property(nonatomic, strong)IBInspectable UIColor *runingColor;

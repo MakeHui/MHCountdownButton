@@ -27,6 +27,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
+        _autoRunning = true;
         _count = 0;
         _runingText = @"倒计时 %ld 秒";
         _runingColor = [UIColor lightGrayColor];
@@ -40,6 +41,10 @@
 
 - (IBAction)onTouchUpInside:(UIButton *)sender
 {
+    if (!self.autoRunning) {
+        return;
+    }
+    
     [self stopCountdown];
     
     if (_count == self.duration) {
